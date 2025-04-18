@@ -1,11 +1,11 @@
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
+import AppRoutes from "./routes/AppRoutes";
 
 export default function App() {
   return (
-    <>
-      <div>
-        <h1>QR Code Generate</h1>
-      </div>
-    </>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
 }
