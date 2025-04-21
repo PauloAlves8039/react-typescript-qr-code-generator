@@ -1,8 +1,6 @@
-interface Props {
-    imageBase64: string;
-}
+import { QrCodeViewerProps } from "../../types/QrCodeViewerProps";
 
-export default function QrCodeViewer({ imageBase64 }: Props) {
+export default function QrCodeViewer({ imageBase64 }: QrCodeViewerProps) {
     return (
         <>
             <img
