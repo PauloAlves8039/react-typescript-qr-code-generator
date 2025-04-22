@@ -44,12 +44,14 @@ export default function QrCodeGenerator() {
                         placeholder="Enter something..."
                         value={text}
                         onChange={(e) => setText(e.target.value)}
-                        className="w-full sm:w-64 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 outline-none transition"
+                        className="w-full sm:w-80 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 outline-none transition"
                     />
                     <button
                         onClick={handleGenerate}
                         disabled={loading}
-                        className="w-full sm:w-28 h-10 bg-green-600 text-white rounded-md font-semibold hover:bg-green-700 transition shadow disabled:opacity-50 cursor-pointer flex items-center justify-center gap-2"
+                        className="
+                            w-full sm:w-28 h-10 bg-green-600 text-white rounded-md font-semibold hover:bg-green-700 transition shadow disabled:opacity-50 cursor-pointer flex items-center justify-center gap-2"
+                        title="Generate"
                     >
                         {loading ? "Generating..." : (
                             <>
@@ -60,7 +62,9 @@ export default function QrCodeGenerator() {
                     </button>
                     <button
                         onClick={handleClear}
-                        className="w-full sm:w-28 h-10 bg-red-600 text-white rounded-md font-semibold hover:bg-red-700 transition shadow cursor-pointer flex items-center justify-center gap-2"
+                        className="
+                            w-full sm:w-28 h-10 bg-red-600 text-white rounded-md font-semibold hover:bg-red-700 transition shadow cursor-pointer flex items-center justify-center gap-2"
+                        title="Clear"
                     >
                         <HiTrash className="w-5 h-5" />
                         Clear
