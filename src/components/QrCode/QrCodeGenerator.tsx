@@ -3,6 +3,7 @@ import { useQrCode } from "../../hooks/useQrCode";
 import QrCodeViewer from "./QrCodeViewer";
 import notificationService from "../../utils/notificationService";
 import "../../index.css";
+import LoadingSpinner from "../Loading/LoadingSpinner";
 
 export default function QrCodeGenerator() {
     const [text, setText] = useState("");
@@ -59,9 +60,11 @@ export default function QrCodeGenerator() {
                 </div>
 
                 <div className="flex flex-col items-center min-h-[100px] justify-center">
-                    {error && <p className="text-red-500 text-sm">{error}</p>}
-
-                    {qrCodeImage ? (
+                    {loading ? (
+                        <LoadingSpinner />
+                    ) : error ? (
+                        <p className="text-red-500 text-sm">{error}</p>
+                    ) : qrCodeImage ? (
                         <QrCodeViewer imageBase64={qrCodeImage} />
                     ) : (
                         <p className="text-gray-400 text-sm">
