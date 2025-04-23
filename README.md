@@ -13,6 +13,11 @@
 
 Repository with a web application to simulate a `QR Code` generator.
 
+This application integrates with the backend: [QR Code Generator API](https://github.com/PauloAlves8039/dotnet-qr-code-generator/edit/master/README.md) 
+
+## 🌐 Online Version
+The API is hosted on `Vercel` and can be accessed here: [QR Code Generator](https://qr-code-generator-6qki2fl9l-paulo-alves-projects.vercel.app/) 
+
 ## 🚀 Technologies and Tools
 
 This project was developed using the following technologies:
@@ -26,10 +31,13 @@ This project was developed using the following technologies:
   - `React Icons`
   - `React Toast`
   - `Tailwind CSS`
-  - `Vite`
   - `Axios`
  
-  ## 📌 Technical Decisions
+- **Build and Deploy:**  
+  - `Vite`
+  - `Vercel`
+ 
+## 📌 Technical Decisions
 
 - I decided to create a simple Applacation focused on generating QR Codes.
 - Implement the separation of elements organized by folders.
